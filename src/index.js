@@ -25,6 +25,7 @@ function wrongCountry(error) {
 }
 
 function showCountry(arr) {
+    console.log(arr)
     if (arr.length > 10) {
     return Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
     }
@@ -37,7 +38,7 @@ function showCountry(arr) {
     }).join("")
     return countryInfo.innerHTML = smallTemaplate
     }
-    let template = arr.map(({flags, name, capital, population, languages}) => {
+  let template = arr.map(({ flags, name, capital, population, languages }) => {
         return `<h1 class="name-country">
     <img src="${flags.svg}" alt="" width="20px" height="20px">
       ${name.official}
